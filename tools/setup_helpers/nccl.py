@@ -20,7 +20,7 @@ LIBNCCL_PREFIX = "libnccl"
 if USE_STATIC_NCCL is not None:
     LIBNCCL_PREFIX = "libnccl_static"
 
-if USE_CUDA and not check_negative_env_flag('USE_SYSTEM_NCCL'):
+if USE_CUDA and check_negative_env_flag('USE_SYSTEM_NCCL'):
     ENV_ROOT = os.getenv('NCCL_ROOT_DIR', None)
     LIB_DIR = os.getenv('NCCL_LIB_DIR', None)
     INCLUDE_DIR = os.getenv('NCCL_INCLUDE_DIR', None)

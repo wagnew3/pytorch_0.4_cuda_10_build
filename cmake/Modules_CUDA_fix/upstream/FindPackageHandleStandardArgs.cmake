@@ -2,9 +2,8 @@
 # file Copyright.txt or https://cmake.org/licensing for details.
 
 #[=======================================================================[.rst:
-FindPackageHandleStandardArgs
------------------------------
-
+#FindPackageHandleStandardArgs
+#-----------------------------
 This module provides a function intended to be used in :ref:`Find Modules`
 implementing :command:`find_package(<PackageName>)` calls.  It handles the
 ``REQUIRED``, ``QUIET`` and version-related arguments of ``find_package``.
@@ -16,19 +15,18 @@ valid filepaths.
 
   There are two signatures::
 
-    find_package_handle_standard_args(<PackageName>
-      (DEFAULT_MSG|<custom-failure-message>)
-      <required-var>...
-      )
+#   find_package_handle_standard_args(<PackageName>
+#     (DEFAULT_MSG|<custom-failure-message>)
+#     <required-var>...)
 
-    find_package_handle_standard_args(<PackageName>
-      [FOUND_VAR <result-var>]
-      [REQUIRED_VARS <required-var>...]
-      [VERSION_VAR <version-var>]
-      [HANDLE_COMPONENTS]
-      [CONFIG_MODE]
-      [FAIL_MESSAGE <custom-failure-message>]
-      )
+#   find_package_handle_standard_args(<PackageName>
+#     [FOUND_VAR <result-var>]
+#     [REQUIRED_VARS <required-var>...]
+#     [VERSION_VAR <version-var>]
+#     [HANDLE_COMPONENTS]
+#     [CONFIG_MODE]
+#     [FAIL_MESSAGE <custom-failure-message>]
+#     )
 
   The ``<PackageName>_FOUND`` variable will be set to ``TRUE`` if all
   the variables ``<required-var>...`` are valid and any optional
@@ -128,7 +126,6 @@ directory for ``automoc4``.  Then the call to
 ``find_package_handle_standard_args`` produces a proper success/failure
 message.
 #]=======================================================================]
-
 include(${CMAKE_CURRENT_LIST_DIR}/FindPackageMessage.cmake)
 
 # internal helper macro
